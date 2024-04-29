@@ -5,8 +5,8 @@ class SerialPortLogger
 {
     static void Main()
     {
-        string comPort = "COM3"; // Change the COM port to match your setup
-        int baudRate = 921600; // Change the baud rate as needed
+        string comPort = "COM3"; 
+        int baudRate = 921600; 
 
         using (SerialPort serialPort = new SerialPort(comPort, baudRate))
         {
