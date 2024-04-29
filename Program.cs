@@ -1,37 +1,51 @@
 ﻿using System;
+using System.IO;
 using System.IO.Ports;
 
 class SerialPortLogger
 {
     static void Main()
     {
-        string comPort = "COM3"; 
-        int baudRate = 921600; 
+        SerialPort serialPort = null;
+        StreamWriter logger = null;
 
-        using (SerialPort serialPort = new SerialPort(comPort, baudRate))
+        try
         {
-            try
-            {
-                serialPort.Open();
-                Console.WriteLine($"Port {comPort} opened at {baudRate} baud rate.");
+            string comPort = "COM3";
+            int baudRate = 921600;
 
-                using (StreamWriter logger = new StreamWriter("Log.txt", append: true))
+            serialPort = new SerialPort(comPort, baudRate);
+            serialPort.Open();
+            Console.WriteLine($"Port {comPort} opened at {baudRate} baud rate.");
+
+            logger = new StreamWriter("Log.txt", append: true);
+
+            while (true)
+            {
+                if (serialPort.BytesToRead > 0)
                 {
-                    while (true)
-                    {
-                        if (serialPort.BytesToRead > 0)
-                        {
-                            string logEntry = serialPort.ReadLine();
-                            Console.WriteLine(logEntry);
-                            logger.WriteLine($"{DateTime.Now}: {logEntry}");
-                            logger.Flush();
-                        }
-                    }
+                    string logEntry = serialPort.ReadLine();
+                    Console.WriteLine(logEntry);
+                    logger.WriteLine($"{DateTime.Now}: {logEntry}");
+                    logger.Flush();
                 }
             }
-            catch (Exception ex)
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        finally
+        {
+            if (logger != null)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                logger.Close();
+                logger.Dispose();
+            }
+            if (serialPort != null)
+            {
+                serialPort.Close();
+                serialPort.Dispose();
             }
         }
     }
