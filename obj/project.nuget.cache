@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "XNAC1Vx9qLUbNGzJ2v2sk+p3rHd3WSbuKzC0Jyt9zwstGxH71cVC+BJKuwI8TkEionJfQ+uou2a41w9MQfqa7A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alyks\\OneDrive\\Dokumenter\\Egendefinerte Office-maler\\Assignments esport\\Year 2, 2nd semester\\Programming\\Exam_Unit_4_ind\\Exam_Unit_4_ind.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alyks\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\alyks\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\alyks\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\alyks\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\alyks\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\alyks\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\alyks\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
